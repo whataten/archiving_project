@@ -19,3 +19,12 @@ result = [word for word in strs if word not in banned]
 strs = ['a', 'a', 'b', 'c', 'd']
 value = collections.Counter(strs).most_common()[0][0]
 count = collections.Counter(strs).most_common()[0][1]
+
+# 원본 리스트 정렬, 원본 리스트 유지하며 정렬
+strs = ['1', '3', '2']
+strs.sort()
+sorted_strs = sorted(strs)
+
+# 리스트에서 중복 값 삭제
+strs = ['1', '3', '3']
+list(set(strs))

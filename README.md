@@ -31,3 +31,17 @@
 > value = collections.Counter(strs).most_common()[0][0]
 > count = collections.Counter(strs).most_common()[0][1]
 > ```
+### 2. List manipulation (~198p)
+> **원본 리스트 정렬**, **원본 리스트 유지하며 정렬**
+> 
+> ```python
+> strs = ['1', '3', '2']
+> strs.sort()
+> sorted_strs = sorted(strs)
+> ```
+
+> 리스트 **중복 값 제거**
+> ```python
+> strs = ['1', '3', '3']
+> list(set(strs))
+> ```
