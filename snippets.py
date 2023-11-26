@@ -1,4 +1,5 @@
 import collections
+import sys
 
 # 2차원 배열 ['1, B', '2, A']에서 두 번째 요소(알파벳)순으로 정렬
 strs = ['1, B', '2, A']
@@ -28,3 +29,9 @@ sorted_strs = sorted(strs)
 # 리스트에서 중복 값 삭제
 strs = ['1', '3', '3']
 list(set(strs))
+
+# 최댓값 최솟값 지정
+mx = -sys.maxsize
+mn = sys.maxsize
+mx = float('inf')
+mn = float('-inf')

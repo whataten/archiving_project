@@ -45,3 +45,13 @@
 > strs = ['1', '3', '3']
 > list(set(strs))
 > ```
+
+> **최댓값 최솟값** 지정
+> 
+> ```python
+> mx = -sys.maxsize
+> mn = sys.maxsize
+> mx = float('inf')
+> mn = float('-inf')
+> ```
+### 3. Linked list manipulation (~239p)
