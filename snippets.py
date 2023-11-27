@@ -35,3 +35,19 @@ mx = -sys.maxsize
 mn = sys.maxsize
 mx = float('inf')
 mn = float('-inf')
+
+# 데크
+strs = collections.deque()
+strs.append('a')
+strs.appendleft('a')
+strs.pop()
+strs.popleft()
+
+# 리스트를 문자열로
+strs = ['a', 'b', 'c']
+''.join(word for word in strs)
+
+# 스왑
+a = 1
+b = 2
+a, b = b, a

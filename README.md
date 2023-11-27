@@ -55,3 +55,27 @@
 > mn = float('-inf')
 > ```
 ### 3. Linked list manipulation (~239p)
+> **데크**
+> 
+> ```python
+> strs = collections.deque()
+> strs.append('a')
+> strs.appendleft('a')
+> strs.pop()
+> strs.popleft()
+> ```
+
+> **리스트를 문자열로**
+> 
+> ```python
+> strs = ['a', 'b', 'c']
+> ''.join(word for word in strs)
+> ```
+
+> 스왑
+> 
+> ```python
+> a = 1
+> b = 2
+> a, b = b, a
+> ```
