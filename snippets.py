@@ -46,8 +46,13 @@ strs.popleft()
 # 리스트를 문자열로
 strs = ['a', 'b', 'c']
 ''.join(word for word in strs)
+''.join(strs)
 
 # 스왑
 a = 1
 b = 2
 a, b = b, a
+
+# 리스트 기본값 설정
+T = [1, 2, 3, 4]
+strs = ['기본값'] * len(T)

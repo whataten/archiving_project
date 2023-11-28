@@ -70,12 +70,20 @@
 > ```python
 > strs = ['a', 'b', 'c']
 > ''.join(word for word in strs)
+> ''.join(strs)
 > ```
 
-> 스왑
+> **스왑**
 > 
 > ```python
 > a = 1
 > b = 2
 > a, b = b, a
+> ```
+### 4. Stack, Queue manipulation(~265p)
+> 리스트 **기본값** 설정
+> 
+> ```python
+> T = [1, 2, 3, 4]
+> strs = ['기본값'] * len(T)
 > ```
