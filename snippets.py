@@ -1,5 +1,6 @@
 import collections
 import sys
+import heapq
 
 # 2차원 배열 ['1, B', '2, A']에서 두 번째 요소(알파벳)순으로 정렬
 strs = ['1, B', '2, A']
@@ -56,3 +57,14 @@ a, b = b, a
 # 리스트 기본값 설정
 T = [1, 2, 3, 4]
 strs = ['기본값'] * len(T)
+
+# 우선순위 큐
+heap = []
+heapq.heappush(heap, (1, 'b'))
+heapq.heappop(heap)
+
+# 최대 힙 구현하기
+heap = [1, 3, 5, 7, 9]
+max_heap = []
+for item in heap:
+    heapq.heappush(max_heap, (-item, item))

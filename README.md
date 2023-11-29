@@ -80,10 +80,28 @@
 > b = 2
 > a, b = b, a
 > ```
-### 4. Stack, Queue manipulation(~265p)
+### 4. Stack, Queue manipulation (~265p)
 > 리스트 **기본값** 설정
 > 
 > ```python
 > T = [1, 2, 3, 4]
 > strs = ['기본값'] * len(T)
 > ```
+
+> **우선순위 큐**
+> 
+> ```python
+> heap = []
+> heapq.heappush(heap, (1, 'b'))
+> heapq.heappop(heap)
+> ```
+
+> **최대 힙** 구현
+> 
+> ```python
+> heap = [1, 3, 5, 7, 9]
+> max_heap = []
+> for item in heap:
+>     heapq.heappush(max_heap, (-item, item))
+> ```
+### 5. Hash table manipulation (~313p)
