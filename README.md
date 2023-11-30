@@ -105,3 +105,14 @@
 >     heapq.heappush(max_heap, (-item, item))
 > ```
 ### 5. Hash table manipulation (~313p)
+> **딕셔너리로 개수 확인**
+> 
+> ```python
+> dic = {}
+> strs = ['a', 'a', 'b']
+> for word in strs:
+>     if word in dic:
+>         dic[word] += 1
+>     else:
+>         dic[word] = 1
+> ```

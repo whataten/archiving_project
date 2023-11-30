@@ -68,3 +68,12 @@ heap = [1, 3, 5, 7, 9]
 max_heap = []
 for item in heap:
     heapq.heappush(max_heap, (-item, item))
+
+# 딕셔너리로 개수 확인
+dic = {}
+strs = ['a', 'a', 'b']
+for word in strs:
+    if word in dic:
+        dic[word] += 1
+    else:
+        dic[word] = 1
