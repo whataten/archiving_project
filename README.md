@@ -116,3 +116,19 @@
 >     else:
 >         dic[word] = 1
 > ```
+
+> **딕셔너리 키, 값 스왑, 값으로 키 찾기**
+> 
+> ```python
+> dictionary = {1: 3, 2: 2}
+> swap_dict = dict(map(reversed, dictionary.items()))
+> ```
+
+> **최빈 값, 빈도 상위 k개를 갖는 딕셔너리**
+> 
+> ```python
+> k = 1
+> strs = ['a', 'a', 'b', 'c', 'd']
+> value = collections.Counter(strs).most_common(k)
+> ```
+### 6. Graph (~370p)

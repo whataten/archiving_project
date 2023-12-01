@@ -77,3 +77,12 @@ for word in strs:
         dic[word] += 1
     else:
         dic[word] = 1
+        
+# 딕셔너리 키, 값 스왑, 값으로 키 찾기
+dictionary = {1: 3, 2: 2}
+swap_dict = dict(map(reversed, dictionary.items()))
+
+# 최빈 값, 빈도 상위 k개를 갖는 딕셔너리
+k = 1
+strs = ['a', 'a', 'b', 'c', 'd']
+value = collections.Counter(strs).most_common(k)
