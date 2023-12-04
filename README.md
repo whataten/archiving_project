@@ -132,3 +132,18 @@
 > value = collections.Counter(strs).most_common(k)
 > ```
 ### 6. Graph (~370p)
+> **2차원 리스트에서 값의 위치 찾기**
+> 
+> ```python
+> strs = [['a', 'b'], ['c', 'd']]
+> n = len(strs)     # 행
+> m = len(strs[0])  # 열
+> positions = [(i, j) for i in range(n) for j in range (m) if strs[i][j] == 'c']
+> ```
+
+> 리스트 참조 없이 **깊은 복사**
+> 
+> ```python
+> strs = ['a', 'b', 'c']
+> new_strs = strs[:]
+> ```
