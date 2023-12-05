@@ -147,3 +147,39 @@
 > strs = ['a', 'b', 'c']
 > new_strs = strs[:]
 > ```
+
+> **중복 리스트 요소 제거**
+> 
+> ```python
+> lists = [[1, 2], [2, 1], [3, 3, 3], [2, 1]]
+> unique_ints = [list(item) for item in {tuple(sorted(list)) for list in lists}]
+> ```
+
+> **2차원 리스트에서 열 추출**
+> 
+> ```python
+> lists = [
+>     [0, 1],
+>     [2, 3],
+>     [4, 5],
+>     [6, 7],
+>     [8, 9],
+> ]
+> column = [e[k] for e in lists] # k 번째 열
+> ```
+
+> **리스트에서 값의 인덱스를 모두 찾기**
+> 
+> ```python
+> strs = ['a', 'a', 'b', 'c', 'd']
+> index = list(filter(lambda x: strs[x] == 'a', range(len(strs))))
+> 
+> lists = [
+>     [0, 1],
+>     [2, 3],
+>     [4, 5],
+>     [6, 7],
+>     [8, 9],
+> ]
+> index = list(filter(lambda x: lists[x][0] == 2, range(len(lists)))) # 1 번째 열에서 찾기
+> ```
