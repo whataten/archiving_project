@@ -216,3 +216,4 @@
 >                 dist[i[0]] = cost
 >                 heapq.heappush(q, (cost, i[0]))
 > ```
+### 8. Tree (~445p)
