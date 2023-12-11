@@ -1,6 +1,7 @@
 import collections
 import sys
 import heapq
+import itertools
 
 # 2차원 배열 ['1, B', '2, A']에서 두 번째 요소(알파벳)순으로 정렬
 strs = ['1, B', '2, A']
@@ -151,3 +152,8 @@ def dijkstra(start):
             if cost < dist[i[0]]:
                 dist[i[0]] = cost
                 heapq.heappush(q, (cost, i[0]))
+
+# 순열
+lists = [1, 2, 3, 4]
+tuple_list = itertools.permutations(lists)
+list_list = map(list, itertools.permutations(lists))

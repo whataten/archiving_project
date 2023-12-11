@@ -217,3 +217,10 @@
 >                 heapq.heappush(q, (cost, i[0]))
 > ```
 ### 8. Tree (~445p)
+> **순열**
+> 
+> ```python
+> lists = [1, 2, 3, 4]
+> tuple_list = itertools.permutations(lists)
+> list_list = map(list, itertools.permutations(lists))
+> ```
