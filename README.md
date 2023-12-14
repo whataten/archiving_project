@@ -4,7 +4,7 @@
 
 ## [Algorithms](./algorithms.md)  
 
-## [Computer Network](./algorithms.md)  
+## [Computer Network](./network.md)  
 
 <!-- Algorithms -->
 <!-- CS -->
