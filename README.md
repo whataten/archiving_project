@@ -4,6 +4,9 @@
 
 ## [Algorithms](./algorithms.md)  
 
+## [Computer Network](./algorithms.md)  
+
 <!-- Algorithms -->
 <!-- CS -->
 <!-- OS -->
+<!-- Network -->
