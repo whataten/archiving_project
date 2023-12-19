@@ -1,6 +1,41 @@
+### Sorting
+> **버블 정렬**
+> 
+> ![사진](./assets/bubble.png)
+> 
+> ```python
+> ints = [3, 1, 2]
+> for i in range(0, len(ints)):
+>     for j in range (i, len(ints) - 1):
+>         if ints[j] > ints[j + 1]:
+>             ints[j], ints[j + 1] = ints[j + 1], ints[j]
+> ```
+
+> **퀵 정렬**
+> 
+> ![사진](./assets/quick.png)
+> 
+> ```python
+> def quick_sort(arr, l, r):
+>     if l < r:
+>         pivot = partition(arr, l, r)
+>         quick_sort(arr, l, pivot - 1)
+>         quick_sort(arr, pivot + 1, r)
+>         
+> def partition(arr, l, r):
+>     pivot = arr[r]
+>     i = l - 1
+>     for j in range(l, r - 1):
+>         if arr[j] <= pivot:
+>             i += 1
+>             arr[i], arr[j] = arr[j], arr[i]
+>     arr[i + 1], arr[r] = arr[r], arr[i + 1]
+>     return i + 1
+> ```
+
 > 최단 경로 **다익스트라** 알고리즘
 > 
-> ![그래프](./assets/dijkstra.png)
+> ![사진](./assets/dijkstra.png)
 > 
 > ```python
 > nodes, lines = 5, 8
