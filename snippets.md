@@ -192,5 +192,24 @@
 > tuple_list = itertools.permutations(lists)
 > list_list = map(list, itertools.permutations(lists))
 > ```
+### 17. Sorting (~514p)
+> 행렬의 **연결 연산** 및 **중첩 리스트 생성**
+> 
+> ```python
+> a = [1]
+> b = [2, 3]
+> a += b 
+> # 결과 : [1, 2, 3]
+> 
+> c = [1]
+> d = [2, 3]
+> c += d,
+> # 결과 : [1, [2, 3]]
+> 
+> e = [1]
+> f = [2, 3]
+> e += [f]
+> # 결과 : [1, [2, 3]]
+> ```
 
 **[home](./README.md)**
