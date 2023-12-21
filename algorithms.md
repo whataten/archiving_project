@@ -33,6 +33,18 @@
 >     return i + 1
 > ```
 
+> **삽입 정렬**
+> 
+> ![사진](./assets/insertion.gif)
+> 
+> ```python
+> def insertion_sort(arr):
+>     for end in range(1, len(arr)):
+>         for i in range(end, 0, -1):
+>             if arr[i - 1] > arr[i]:
+>                 arr[i - 1], arr[i] = arr[i], arr[i - 1]
+> ```
+
 > 최단 경로 **다익스트라** 알고리즘
 > 
 > ![사진](./assets/dijkstra.png)

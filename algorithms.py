@@ -24,6 +24,13 @@ def partition(arr, l, r):
     arr[i + 1], arr[r] = arr[r], arr[i + 1]
     return i + 1
 
+# 삽입 정렬
+def insertion_sort(arr):
+    for end in range(1, len(arr)):
+        for i in range(end, 0, -1):
+            if arr[i - 1] > arr[i]:
+                arr[i - 1], arr[i] = arr[i], arr[i - 1]
+
 # 최단 경로 다익스트라 알고리즘
 nodes, lines = 5, 8
 start = 1
