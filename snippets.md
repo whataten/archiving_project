@@ -192,6 +192,23 @@
 > tuple_list = itertools.permutations(lists)
 > list_list = map(list, itertools.permutations(lists))
 > ```
+
+> **`==`, `is`의 차이**
+> 
+> ```python
+> print(3 == 3.0) # return True
+> print(3 is 3.0) # return False
+> ```
+
+> **`is`의 용례**
+> 
+> ```python
+> a = 3
+> print(a is None)
+> print(a is True)
+> print(a is False)
+> ```
+
 ### 17. Sorting (~514p)
 > 행렬의 **연결 연산** 및 **중첩 리스트 생성**
 > 

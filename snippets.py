@@ -143,3 +143,13 @@ e = [1]
 f = [2, 3]
 e += [f]
 # 결과 : [1, [2, 3]]
+
+# ==, is의 차이
+print(3 == 3.0) # return True
+print(3 is 3.0) # return False
+
+# is의 용례
+a = 3
+print(a is None)
+print(a is True)
+print(a is False)
