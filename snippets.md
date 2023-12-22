@@ -27,6 +27,7 @@
 > 리스트 요소 중 **최빈 값, 빈도 찾기**
 > 
 > ```python
+> import collections
 > strs = ['a', 'a', 'b', 'c', 'd']
 > value = collections.Counter(strs).most_common()[0][0]
 > count = collections.Counter(strs).most_common()[0][1]
@@ -49,6 +50,7 @@
 > **최댓값 최솟값** 지정
 > 
 > ```python
+> import sys
 > mx = -sys.maxsize
 > mn = sys.maxsize
 > mx = float('inf')
@@ -58,6 +60,7 @@
 > **데크**
 > 
 > ```python
+> import collections
 > strs = collections.deque()
 > strs.append('a')
 > strs.appendleft('a')
@@ -91,6 +94,7 @@
 > **우선순위 큐**
 > 
 > ```python
+> import heapq
 > heap = []
 > heapq.heappush(heap, (1, 'b'))
 > heapq.heappop(heap)
@@ -99,6 +103,7 @@
 > **최대 힙** 구현
 > 
 > ```python
+> import heapq
 > heap = [1, 3, 5, 7, 9]
 > max_heap = []
 > for item in heap:
@@ -127,6 +132,7 @@
 > **최빈 값, 빈도 상위 k개를 갖는 딕셔너리**
 > 
 > ```python
+> import collections
 > k = 1
 > strs = ['a', 'a', 'b', 'c', 'd']
 > value = collections.Counter(strs).most_common(k)
@@ -145,7 +151,7 @@
 > 
 > ```python
 > strs = ['a', 'b', 'c']
-> new_strs = strs[:]
+> new_strs = strs[:] # 2차원 배열에서는 얕은 복사됨
 > ```
 
 > **중복 리스트 요소 제거**
@@ -188,6 +194,7 @@
 > **순열**
 > 
 > ```python
+> import itertools
 > lists = [1, 2, 3, 4]
 > tuple_list = itertools.permutations(lists)
 > list_list = map(list, itertools.permutations(lists))
@@ -227,6 +234,14 @@
 > f = [2, 3]
 > e += [f]
 > # 결과 : [1, [2, 3]]
+> ```
+
+> Mutable 객체의 **완전한 깊은 복사**
+> 
+> ```python
+> import copy
+> arr1 = [[1, 3], 3, 1]
+> arr2 = copy.deepcopy(arr1)
 > ```
 
 **[home](./README.md)**

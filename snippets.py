@@ -1,8 +1,3 @@
-import collections
-import sys
-import heapq
-import itertools
-
 # 2차원 배열 ['1, B', '2, A']에서 두 번째 요소(알파벳)순으로 정렬
 strs = ['1, B', '2, A']
 strs.sort(key=lambda x: (x.split()[1:], x.split()[:1]))
@@ -19,6 +14,7 @@ banned = ['a']
 result = [word for word in strs if word not in banned]
 
 # 리스트 요소 중 최빈 값, 빈도 찾기
+import collections
 strs = ['a', 'a', 'b', 'c', 'd']
 value = collections.Counter(strs).most_common()[0][0]
 count = collections.Counter(strs).most_common()[0][1]
@@ -33,12 +29,14 @@ strs = ['1', '3', '3']
 list(set(strs))
 
 # 최댓값 최솟값 지정
+import sys
 mx = -sys.maxsize
 mn = sys.maxsize
 mx = float('inf')
 mn = float('-inf')
 
 # 데크
+import collections
 strs = collections.deque()
 strs.append('a')
 strs.appendleft('a')
@@ -60,11 +58,13 @@ T = [1, 2, 3, 4]
 strs = ['기본값'] * len(T)
 
 # 우선순위 큐
+import heapq
 heap = []
 heapq.heappush(heap, (1, 'b'))
 heapq.heappop(heap)
 
 # 최대 힙 구현하기
+import heapq
 heap = [1, 3, 5, 7, 9]
 max_heap = []
 for item in heap:
@@ -84,6 +84,7 @@ dictionary = {1: 3, 2: 2}
 swap_dict = dict(map(reversed, dictionary.items()))
 
 # 최빈 값, 빈도 상위 k개를 갖는 딕셔너리
+import collections
 k = 1
 strs = ['a', 'a', 'b', 'c', 'd']
 value = collections.Counter(strs).most_common(k)
@@ -96,7 +97,7 @@ positions = [(i, j) for i in range(n) for j in range (m) if strs[i][j] == 'c']
 
 # 리스트 참조 없이 깊은 복사
 strs = ['a', 'b', 'c']
-new_strs = strs[:]
+new_strs = strs[:] # 2차원 배열에서는 얕은 복사됨
 
 # 중복 리스트 요소 제거
 lists = [[1, 2], [2, 1], [3, 3, 3], [2, 1]]
@@ -126,6 +127,7 @@ lists = [
 index = list(filter(lambda x: lists[x][0] == 2, range(len(lists)))) # 1 번째 열에서 찾기
 
 # 순열
+import itertools
 lists = [1, 2, 3, 4]
 tuple_list = itertools.permutations(lists)
 list_list = map(list, itertools.permutations(lists))
@@ -153,3 +155,8 @@ a = 3
 print(a is None)
 print(a is True)
 print(a is False)
+
+# Mutable 객체의 완전한 깊은 복사
+import copy
+arr1 = [[1, 3], 3, 1]
+arr2 = copy.deepcopy(arr1)
