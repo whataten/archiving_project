@@ -6,7 +6,5 @@
 
 ## [Computer Network](./network.md)  
 
-<!-- Algorithms -->
 <!-- CS -->
 <!-- OS -->
-<!-- Network -->
