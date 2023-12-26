@@ -244,4 +244,45 @@
 > arr2 = copy.deepcopy(arr1)
 > ```
 
+> **딕셔너리의 값을 기본적으로 리스트**로 하는 방법
+> 
+> ```python
+> import collections
+> list_pair = collections.defaultdict(list)
+> list_pair['key'].append(3)
+> list_pair['key'].append(7)
+> 
+> pair = {}
+> pair['key'] = [3] # 바로 append 불가능
+> pair['key'].append(7)
+> ```
+
+> **딕셔너리 오름차순 키 정렬**
+> 
+> ```python
+> pair = {'apple' : 7, 'banana' : 4}
+> sorted_pair = dict(sorted(pair.items()))
+> ```
+
+> **딕셔너리 내림차순 키 정렬**
+> 
+> ```python
+> pair = {'apple' : 7, 'banana' : 4}
+> sorted_pair = dict(sorted(pair.items(), reverse=True))
+> ```
+
+> **딕셔너리 오름차순 값 정렬**
+> 
+> ```python
+> pair = {'apple' : 7, 'banana' : 4}
+> sorted_pair = dict(sorted(pair.items(), key= lambda x : x[1]))
+> ```
+
+> **딕셔너리 내림차순 값 정렬**
+> 
+> ```python
+> pair = {'apple' : 7, 'banana' : 4}
+> sorted_pair = dict(sorted(pair.items(), key= lambda x : x[1], reverse=True))
+> ```
+
 **[home](./README.md)**

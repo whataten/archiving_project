@@ -160,3 +160,29 @@ print(a is False)
 import copy
 arr1 = [[1, 3], 3, 1]
 arr2 = copy.deepcopy(arr1)
+
+# 딕셔너리의 값을 기본적으로 리스트로 하는 방법
+import collections
+list_pair = collections.defaultdict(list)
+list_pair['key'].append(3)
+list_pair['key'].append(7)
+
+pair = collections.defaultdict() # pair = {}
+pair['key'] = [3]
+pair['key'].append(7)
+
+# 딕셔너리 오름차순 키 정렬
+pair = {'apple' : 7, 'banana' : 4}
+sorted_pair = dict(sorted(pair.items()))
+
+# 딕셔너리 내림차순 키 정렬
+pair = {'apple' : 7, 'banana' : 4}
+sorted_pair = dict(sorted(pair.items(), reverse=True))
+
+# 딕셔너리 오름차순 값 정렬
+pair = {'apple' : 7, 'banana' : 4}
+sorted_pair = dict(sorted(pair.items(), key= lambda x : x[1]))
+
+# 딕셔너리 내림차순 값 정렬
+pair = {'apple' : 7, 'banana' : 4}
+sorted_pair = dict(sorted(pair.items(), key= lambda x : x[1], reverse=True))
