@@ -1,4 +1,3 @@
-### Sorting
 > **버블 정렬**
 > 
 > ![사진](./assets/bubble.png)
@@ -49,7 +48,7 @@
 > 
 > ![사진](./assets/binary_search.gif)
 > 
-> ```pytyon
+> ```python
 > nums = [1, 4, 5, 7, 8, 10, 11]
 > target = 8
 > 
