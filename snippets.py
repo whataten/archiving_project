@@ -186,3 +186,9 @@ sorted_pair = dict(sorted(pair.items(), key= lambda x : x[1]))
 # 딕셔너리 내림차순 값 정렬
 pair = {'apple' : 7, 'banana' : 4}
 sorted_pair = dict(sorted(pair.items(), key= lambda x : x[1], reverse=True))
+
+# 오버플로우를 고려한 중앙 값 계산 (파이썬은 관계없음)
+left = 5
+right = 10
+mid = (left + right) // 2           # 오버플로우 발생 가능성 존재
+mid = left + ((right - left) // 2)  # 오버플로우 방지

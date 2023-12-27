@@ -285,4 +285,16 @@
 > sorted_pair = dict(sorted(pair.items(), key= lambda x : x[1], reverse=True))
 > ```
 
+### 18. Binary Search (~540p)
+> **오버플로우를 고려한 중앙 값 계산** (파이썬은 관계없음)
+> + 
+> ```python
+> left = 5
+> right = 10
+> # 오버플로우 발생 가능성 존재
+> mid = (left + right) // 2 
+> # 오버플로우 방지
+> mid = left + ((right - left) // 2)
+> ```
+
 **[home](./README.md)**

@@ -45,6 +45,30 @@
 >                 arr[i - 1], arr[i] = arr[i], arr[i - 1]
 > ```
 
+> **이진 검색**
+> 
+> ![사진](./assets/binary_search.gif)
+> 
+> ```pytyon
+> nums = [1, 4, 5, 7, 8, 10, 11]
+> target = 8
+> 
+> def binary_search(left, right):
+>     if left <= right:
+>         mid = (left + right) // 2
+>         
+>         if nums[mid] < target:
+>             binary_search(mid + 1, right)
+>         elif nums[mid] > target:
+>             binary_search(left, mid - 1)
+>         else:
+>             return mid
+>         
+>     else:
+>         return None
+> ```
+
+> 
 > 최단 경로 **다익스트라** 알고리즘
 > 
 > ![사진](./assets/dijkstra.png)
