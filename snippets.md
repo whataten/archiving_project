@@ -297,4 +297,19 @@
 > mid = left + ((right - left) // 2)
 > ```
 
+### 18. Bits Manipulation (~568p)
+> **2의 보수**
+> 
+> ```python
+> ~ True # return -2 (Not x == -x -1)
+> ```
+
+> **2진수 10진수 상호 변환**
+> 
+> ```python
+> print(bin(87))              # return 0b1010111
+> print(int('0b1010111', 2))  # return 87
+> print(int('1010111', 2))    # return 87
+> ```
+
 **[home](./README.md)**

@@ -192,3 +192,11 @@ left = 5
 right = 10
 mid = (left + right) // 2           # 오버플로우 발생 가능성 존재
 mid = left + ((right - left) // 2)  # 오버플로우 방지
+
+# 비트 연산자
+~ True # return -2 (Not x == -x -1)
+
+# 2진수 10진수 변환
+print(bin(87))              # return 0b1010111
+print(int('0b1010111', 2))  # return 87
+print(int('1010111', 2))    # return 87
