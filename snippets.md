@@ -297,7 +297,7 @@
 > mid = left + ((right - left) // 2)
 > ```
 
-### 18. Bits Manipulation (~568p)
+### 19. Bits Manipulation (~568p)
 > **2의 보수**
 > 
 > ```python
@@ -310,6 +310,27 @@
 > print(bin(87))              # return 0b1010111
 > print(int('0b1010111', 2))  # return 87
 > print(int('1010111', 2))    # return 87
+> ```
+
+### 20. Sliding Window (~584p)
+> 리스트 중복 값의 **인덱스 모두 찾기**
+> 
+> ```python
+> strs = ['a', 'b', 'a', 'a']
+> strs.index('a') 
+> # return only 0
+> list(filter(lambda x : strs[x] == 'a', range(len(strs)))) 
+> # return [0, 2, 3]
+> ```
+
+> 문자열의 일부 또는 전체를 순회하며 등장횟수를 **카운트해나가면서** 최빈값을 확인
+> 
+> ```python
+> strs = 'abaa'
+> counts = collections.Counter()
+> for i in range(len(strs)):
+>     counts[strs[i]] += 1
+>     counts.most_common()[0] 
 > ```
 
 **[home](./README.md)**

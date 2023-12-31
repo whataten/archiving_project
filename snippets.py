@@ -193,10 +193,24 @@ right = 10
 mid = (left + right) // 2           # 오버플로우 발생 가능성 존재
 mid = left + ((right - left) // 2)  # 오버플로우 방지
 
-# 비트 연산자
+# 2의 보수
 ~ True # return -2 (Not x == -x -1)
 
-# 2진수 10진수 변환
+# 2진수 10진수 상호 변환
 print(bin(87))              # return 0b1010111
 print(int('0b1010111', 2))  # return 87
 print(int('1010111', 2))    # return 87
+
+# 리스트 중복 값의 인덱스 모두 찾기
+strs = ['a', 'b', 'a', 'a']
+strs.index('a') # return only 0
+list(filter(lambda x : strs[x] == 'a', range(len(strs)))) # return [0, 2, 3]
+
+# 문자열의 일부 또는 전체를 순회하며 등장횟수를 카운트해나가면서 최빈값을 확인
+strs = 'abaa'
+counts = collections.Counter()
+for i in range(len(strs)):
+    counts[strs[i]] += 1
+
+counts.most_common()[0] 
+# return ('a', 3)
