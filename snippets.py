@@ -214,3 +214,14 @@ for i in range(len(strs)):
 
 counts.most_common()[0] 
 # return ('a', 3)
+
+# 리스트 병합
+strs_1 = ['a', 'b', 'c']
+strs_2 = ['d', 'e', 'f']
+
+strs_1.append(strs_2) 
+# return ['a', 'b', 'c', ['d', 'e', 'f']]
+
+strs_1.extend(strs_2)
+strs_1 + strs_2
+# return ['a', 'b', 'c', 'd', 'e', 'f']
