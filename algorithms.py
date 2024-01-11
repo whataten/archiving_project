@@ -111,3 +111,19 @@ def merge(left, right):
     result += right[j:]
     
     return result
+
+# DFS
+def problem():
+    end_condition = False
+    init_parameter = True
+    
+    def dfs(parameter):
+        if end_condition:
+            return 
+        
+        dfs(parameter)
+        dfs(parameter)
+        dfs(parameter)
+        dfs(parameter)
+        
+    dfs(init_parameter)
