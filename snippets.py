@@ -225,3 +225,16 @@ strs_1.append(strs_2)
 strs_1.extend(strs_2)
 strs_1 + strs_2
 # return ['a', 'b', 'c', 'd', 'e', 'f']
+
+# 복잡한 조건을 가진 정렬
+import functools
+
+def comparator(a, b):
+    if len(a) > len(b):
+        return 1
+    else:
+        return -1
+
+strs = ['a', 'aaa', 'aa', 'aaaaaaa']
+sorted_strs = sorted(strs, key=functools.cmp_to_key(comparator))
+# return ['a', 'aa', 'aaa', 'aaaaaaa']
