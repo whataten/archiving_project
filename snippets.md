@@ -364,4 +364,12 @@
 > # return ['a', 'aa', 'aaa', 'aaaaaaa']
 > ```
 
+> **문자열의 문자를 원소로 하는 리스트 생성**
+> 
+> ```python
+> chars = 'target'
+> char_list = [char for char in chars]
+> # return ['t', 'a', 'r', 'g', 'e', 't']
+> ```
+
 **[home](./README.md)**

@@ -238,3 +238,9 @@ def comparator(a, b):
 strs = ['a', 'aaa', 'aa', 'aaaaaaa']
 sorted_strs = sorted(strs, key=functools.cmp_to_key(comparator))
 # return ['a', 'aa', 'aaa', 'aaaaaaa']
+
+# 문자열의 문자를 원소로 하는 리스트 생성
+
+chars = 'target'
+char_list = [char for char in chars]
+# return ['t', 'a', 'r', 'g', 'e', 't']
