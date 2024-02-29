@@ -240,7 +240,11 @@ sorted_strs = sorted(strs, key=functools.cmp_to_key(comparator))
 # return ['a', 'aa', 'aaa', 'aaaaaaa']
 
 # 문자열의 문자를 원소로 하는 리스트 생성
-
 chars = 'target'
 char_list = [char for char in chars]
 # return ['t', 'a', 'r', 'g', 'e', 't']
+
+# 리스트의 모든 요소의 합
+ints = [1, 2, 3, 4]
+sum = sum(ints)
+# return 10

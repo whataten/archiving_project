@@ -372,4 +372,12 @@
 > # return ['t', 'a', 'r', 'g', 'e', 't']
 > ```
 
+> **리스트의 모든 요소의 합**
+> 
+> ```python
+> ints = [1, 2, 3, 4]
+> sum = sum(ints)
+> # return 10
+> ```
+
 **[home](./README.md)**
