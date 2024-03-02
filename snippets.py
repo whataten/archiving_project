@@ -248,3 +248,13 @@ char_list = [char for char in chars]
 ints = [1, 2, 3, 4]
 sum = sum(ints)
 # return 10
+
+# 리스트의 짝수 인덱스만 슬라이싱
+ints = [1, 2, 3, 4]
+ints[0::2]
+# return [1, 3]
+
+# 리스트의 홀수 인덱스만 슬라이싱
+ints = [1, 2, 3, 4]
+ints[1::2]
+# return [2, 4]
