@@ -5,6 +5,7 @@
 > ``` python
 > strs = ['1, B', '2, A']
 > strs.sort(key=lambda x: (x.split()[1:], x.split()[:1]))
+> strs.sotr(key=lambda x: (x.split()[1], x.split()[0]))
 > ```
 
 > 문자열에 **숫자와 문자만 남기기**  
@@ -16,12 +17,31 @@
 >         pass
 > ```
 
+> 문자열에 **숫자만** 남기기
+> 
+> ```python
+> strs = 'A man, a plan, a canal: Panama'
+> for s in strs:
+>     if s.isdigit():
+>         pass
+> ```
+
+> 문자열에 **문자만** 남기기
+> 
+> ```python
+> strs = 'A man, a plan, a canal: Panama'
+> for s in strs:
+>     if s.isalpha():
+>         pass
+> ```
+
 > **리스트로 단어 골라내기**
 > 
 > ```python
 > strs = ['a', 'b', 'c', 'd']
 > banned = ['a']
 > result = [word for word in strs if word not in banned]
+> # return ['b', 'c', 'd']
 > ```
 
 > 리스트 요소 중 **최빈 값, 빈도 찾기**
@@ -122,6 +142,17 @@
 >         dic[word] = 1
 > ```
 
+> Counter를 통해 **특정 값의 개수** 확인
+> 
+> ```python
+> import collections
+> 
+> strs = ['a', 'a', 'b']
+> counter = collections.Counter(strs)
+> print(counter['a'])
+> # return 2
+> ```
+
 > **딕셔너리 키, 값 스왑, 값으로 키 찾기**
 > 
 > ```python
@@ -211,9 +242,9 @@
 > 
 > ```python
 > a = 3
-> print(a is None)
-> print(a is True)
-> print(a is False)
+> print(a is None)  # return False
+> print(a is True)  # return False
+> print(a is False) # return False
 > ```
 
 ### 17. Sorting (~514p)
@@ -287,7 +318,7 @@
 
 ### 18. Binary Search (~540p)
 > **오버플로우를 고려한 중앙 값 계산** (파이썬은 관계없음)
-> + 
+> 
 > ```python
 > left = 5
 > right = 10
@@ -380,20 +411,20 @@
 > # return 10
 > ```
 
-**리스트의 짝수 인덱스만 슬라이싱**
+> **리스트의 짝수 인덱스만 슬라이싱**
+> 
+> ```python
+> ints = [1, 2, 3, 4]
+> ints[0::2]
+> # return [1, 3]
+> ```
 
-```python
-ints = [1, 2, 3, 4]
-ints[0::2]
-# return [1, 3]
-```
-
-**리스트의 홀수 인덱스만 슬라이싱**
-
-```python
-ints = [1, 2, 3, 4]
-ints[1::2]
-# return [2, 4]
-```
+> **리스트의 홀수 인덱스만 슬라이싱**
+> 
+> ```python
+> ints = [1, 2, 3, 4]
+> ints[1::2]
+> # return [2, 4]
+> ```
 
 **[home](./README.md)**
