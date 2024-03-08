@@ -427,4 +427,19 @@
 > # return [2, 4]
 > ```
 
+> **소수** 유무 확인
+> 
+> ```python
+> import math
+> def isprime(num):
+>     if num == 0 or num == 1:
+>         return False
+> 
+>     for i in range(2, math.sqrt(num) + 1):
+>         if num % i == 0:
+>             return False
+>     
+>     return True
+> ```
+
 **[home](./README.md)**
