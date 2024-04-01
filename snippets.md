@@ -442,4 +442,13 @@
 >     return True
 > ```
 
+> 리스트 **요소 별** 합
+> 
+> ```python
+> beg = [2, 2, 3]
+> end = [5, 1, 4]
+> result = [i + j for i, j in zip(beg, end)]
+> # return [7, 3, 7]
+> ```
+
 **[home](./README.md)**

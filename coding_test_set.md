@@ -169,3 +169,142 @@ def solution(genres, plays):
 
     return answer
 ```
+
+## 스택/큐
+1. 같은 숫자는 싫어
+```python
+def solution(arr):
+    
+    answer = [arr[0]]
+    standard = arr[0]
+    
+    for element in arr:
+        if element != standard:
+            answer.append(element)
+            standard = element
+    
+    return answer
+```
+
+2. 기능개발
+```python
+import collections
+import copy
+
+def solution(progresses, speeds):
+    
+    d_progresses = collections.deque(progresses)
+    d_speeds = collections.deque(speeds)
+    
+    # 진척    
+    def pass_by(progresses, speeds):
+        if len(progresses) < len(speeds):
+            diff = len(speeds) - len(progresses)
+            for i in range(diff):
+                speeds.popleft()
+        
+        return collections.deque([x + y for x, y in zip(progresses, speeds)])
+    
+    # 완성 기능 카운트 및 제거
+    def is_completed(progresses):
+        completed = 0
+        c_progresses = copy.deepcopy(progresses)
+        for progress in c_progresses:
+            if progress >= 100:
+                progresses.popleft()
+                completed += 1
+            else:
+                break
+                
+        return completed
+    
+    answer = []
+    
+    while(len(d_progresses) > 0):
+        d_progresses = pass_by(d_progresses, d_speeds)
+         
+        reward = is_completed(d_progresses)
+        if reward > 0:
+            answer.append(reward)
+    
+    return answer
+```
+
+3. 올바른 괄호
+```python
+import collections
+
+def solution(s):
+    if s == "":
+        return True
+    
+    deque = collections.deque([char for char in s])
+    stack = collections.deque()
+    
+    for element in deque:
+        if element == "(":
+            stack.append("(")
+        else:
+            if len(stack) > 0:
+                bowl = stack.pop()
+                if bowl == ")":
+                    stack.append(")")
+            else:
+                stack.append(")")
+                    
+           
+    if len(stack) == 0:
+        return True
+    return False
+```
+
+5. 다리를 지나는 트럭
+```python
+import collections
+
+def solution(bridge_length, weight, truck_weights):
+
+    base_bridge = [0] * bridge_length
+    
+    bridge = collections.deque(base_bridge)
+    trucks = collections.deque(truck_weights)
+    
+    bridge.popleft()
+    bridge.append(trucks[0])
+    seconds = 1
+    current_weight = trucks.popleft()
+    
+    while(current_weight != 0):
+        # 하차
+        current_weight -= bridge.popleft()
+        
+        if len(trucks) == 0:
+            return seconds + bridge_length
+        
+        # 적재 가능 무게라면
+        if current_weight + trucks[0] <= weight:
+            current_weight += trucks[0]
+            bridge.append(trucks.popleft())
+        else:
+            bridge.append(0)
+            
+        seconds += 1
+    
+    return seconds
+```
+
+6. 주식 가격
+```python
+def solution(prices):
+    
+    answer = [0] * len(prices)
+    
+    for start in range (0, len(prices)):
+        for ing in range (start, len(prices) - 1):
+            if prices[start] <= prices[ing]:
+                answer[start] += 1
+            else:
+                break
+    
+    return answer
+```
